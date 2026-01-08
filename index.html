@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Kuiz IT - Level 1</title>
+<style>
+body{font-family:Arial;background:#f2f2f2}
+.box{background:#fff;width:70%;margin:auto;margin-top:30px;padding:20px}
+button{padding:10px;background:#2c3e50;color:white;border:none}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Level 1: Asas IT</h2>
+<p>10 soalan | 1 markah setiap soalan</p>
+
+<form id="quiz">
+
+<p>1. Apakah fungsi utama komputer?</p>
+<input type="radio" name="q1" value="1">A. Memproses data<br>
+<input type="radio" name="q1" value="0">B. Memasak makanan<br>
+<input type="radio" name="q1" value="0">C. Menghasilkan bunyi<br>
+
+<p>2. Peranti input ialah?</p>
+<input type="radio" name="q2" value="0">A. Monitor<br>
+<input type="radio" name="q2" value="1">B. Papan kekunci<br>
+<input type="radio" name="q2" value="0">C. Pencetak<br>
+
+<p>3. CPU dikenali sebagai?</p>
+<input type="radio" name="q3" value="1">A. Otak komputer<br>
+<input type="radio" name="q3" value="0">B. Skrin komputer<br>
+<input type="radio" name="q3" value="0">C. Kabel data<br>
+
+<p>4. Peranti output ialah?</p>
+<input type="radio" name="q4" value="1">A. Monitor<br>
+<input type="radio" name="q4" value="0">B. Tetikus<br>
+<input type="radio" name="q4" value="0">C. Mikrofon<br>
+
+<p>5. RAM digunakan untuk?</p>
+<input type="radio" name="q5" value="1">A. Simpan data sementara<br>
+<input type="radio" name="q5" value="0">B. Simpan data kekal<br>
+<input type="radio" name="q5" value="0">C. Papar imej<br>
+
+<p>6. Sistem nombor komputer?</p>
+<input type="radio" name="q6" value="1">A. Binari<br>
+<input type="radio" name="q6" value="0">B. Perpuluhan<br>
+<input type="radio" name="q6" value="0">C. Rom<br>
+
+<p>7. Laptop ialah?</p>
+<input type="radio" name="q7" value="1">A. Sistem komputer<br>
+<input type="radio" name="q7" value="0">B. Perisian<br>
+<input type="radio" name="q7" value="0">C. Aksesori<br>
+
+<p>8. Contoh perisian ialah?</p>
+<input type="radio" name="q8" value="1">A. Microsoft Word<br>
+<input type="radio" name="q8" value="0">B. Monitor<br>
+<input type="radio" name="q8" value="0">C. CPU<br>
+
+<p>9. Data yang diproses dipanggil?</p>
+<input type="radio" name="q9" value="1">A. Maklumat<br>
+<input type="radio" name="q9" value="0">B. Kod<br>
+<input type="radio" name="q9" value="0">C. Isyarat<br>
+
+<p>10. Contoh data mentah?</p>
+<input type="radio" name="q10" value="1">A. 101010<br>
+<input type="radio" name="q10" value="0">B. Laporan<br>
+<input type="radio" name="q10" value="0">C. Analisis<br>
+
+<br>
+<button type="button" onclick="kira()">Hantar</button>
+</form>
+
+<p id="markah"></p>
+<a id="next" href="level2.html" style="display:none;">➡ Level 2</a>
+</div>
+
+<script>
+function kira(){
+let total=0;
+document.querySelectorAll('input[type=radio]:checked')
+.forEach(j=>total+=parseInt(j.value));
+document.getElementById("markah").innerHTML="Markah: "+total+"/10";
+document.getElementById("next").style.display="inline";
+}
+</script>
+
+</body>
+</html>
